@@ -51,5 +51,5 @@ int main() {
 		n1 += day1;
 		cout << abs(n - n1) + 1 << endl;
 	}
-	return 0;
+	return 0; 
 }
