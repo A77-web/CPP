@@ -15,14 +15,14 @@ bool isLeapYear(int year)
 }
 char a[9], b[9];
 int main() {
-	//nÎªµÚÒ»¸öÈÕÆÚÏà¶ÔÓÚ0000 00 00µÄ²îÖµ£¬n1ÎªµÚ¶þ¸öÈÕÆÚµÄ²îÖµ
+	//nä¸ºç¬¬ä¸€ä¸ªæ—¥æœŸç›¸å¯¹äºŽ0000 00 00çš„å·®å€¼ï¼Œn1ä¸ºç¬¬äºŒä¸ªæ—¥æœŸçš„å·®å€¼
 	int year, month, day, year1, month1, day1, n, n1;
 	while (cin >> a >> b)
 	{
 		n = n1 = 0;
-		sscanf(a, "%04d-%02d-%02d", year, month, day);
-		sscanf(b, "%04d-%02d-%02d", year1, month1, day1);
-		for (int i = 0; i <= year; i++)//¼ÇÂ¼Äê²îÖµ
+		sscanf(a, "%04d-%02d-%02d", &year, &month, &day);
+		sscanf(b, "%04d-%02d-%02d", &year1, &month1, &day1);
+		for (int i = 0; i <= year; i++)//è®°å½•å¹´å·®å€¼
 		{
 			if (isLeapYear(i))
 			{
