@@ -8,3 +8,9 @@ public:
         return n;
     }
 };
+int main()
+{
+    Solution A;
+    cout << A.Sum_Solution(5) << endl;
+    return 0;
+}
