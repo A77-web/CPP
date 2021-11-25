@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool isLetter(char ch)
+    {
+        return (ch>='A' && ch<='Z') || (ch>='a' && ch<='z');
+    }
+    string reverseOnlyLetters(string s)
+    {
+        int left = 0;
+        int right = s.size() - 1;
+        while(left < right)
+        {
+            while(left<right && !isLetter(s[left]))
+                left++;
+            while(right>left && !isLetter(s[right]))
+                right--;
+            std::swap(s[left], s[right]);
+            left++;
+            right--;
+        }
+        return s;
+    }
+};
