@@ -1,24 +1,23 @@
-﻿#include <iostream>
+#include<iostream>
+#include <assert.h>
 using namespace std;
-class A {
-private:
-	int a;
-public:
-	A(int b) :a(b) {
-		cout << "构造函数" << endl;
+char* myStrcpy(char* dest, char* src)
+{
+	assert(dest && src);
+	char* ret = dest;
+	while (*dest++ = *src++)
+	{
+		;
 	}
-	A(const A& c) {
-		a = c.a;
-		cout << "拷贝构造函数" << endl;
-	}
-	~A() {
-		cout << "析构函数" << endl;
-
-	}
-};
-int main() {
-	A a(100);
-	A b = a;
+	return ret;
+}
+int main()
+{
+	char arr1[20] = "XXXXXXXXXXXXXXXXXXX";
+	char arr2[] = "hello";
+	myStrcpy(arr1, arr2);
+	printf("%s", arr1);
+	printf("%s\n", myStrcpy(arr1, arr2));
 	return 0;
 
 }
